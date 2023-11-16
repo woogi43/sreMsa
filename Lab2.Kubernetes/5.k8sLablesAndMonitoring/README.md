@@ -14,14 +14,19 @@ kubectl get pods
 |h1      |httpd     |
 
 ```
-kubectl ~
-kubectl ~
-kubectl ~
+root@vm01:~# kubectl run n1 --image=nginx
+pod/n1 created
+root@vm01:~# kubectl run u1 --image=ubuntu
+pod/u1 created
+root@vm01:~# kubectl run h1 --image=httpd
+pod/h1 created
+root@vm01:~# k get pods
+
 ```
 
 ## 3. 만들어진 pods를 확인하시오.
 ```
-kubectl ~
+kubectl get pods -o wide
 ```
 
 ## 4. ubuntu이미지가 잘 못 만들어진 원인은?
